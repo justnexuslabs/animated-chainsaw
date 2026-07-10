@@ -1,0 +1,40 @@
+import {
+  Archive,
+  Badge,
+  Fingerprint,
+  Home,
+  LayoutDashboard,
+  Package,
+  Radio,
+  ScrollText,
+  Shield
+} from "lucide-react";
+
+export const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Mission Control", href: "/mission-control" },
+  { label: "Genesis", href: "/genesis" },
+  { label: "LIENITY", href: "/lienity" },
+  { label: "Archive", href: "/archive" }
+];
+
+export const mobileNavItems = [
+  { label: "Home", href: "/", icon: Home },
+  { label: "Mission", href: "/mission-control", icon: LayoutDashboard },
+  { label: "Genesis", href: "/genesis", icon: Badge },
+  { label: "LIENITY", href: "/lienity", icon: Fingerprint },
+  { label: "Archive", href: "/archive", icon: Archive }
+];
+
+export const footerResources = [
+  { label: "NFT Protocol", href: "/nft", icon: Shield },
+  { label: "Token Vesting", href: "/vesting", icon: ScrollText },
+  { label: "DOS", href: "/dos", icon: Radio },
+  { label: "Genesis Box", href: "/genesis", icon: Package }
+];
+
+export const connectLinks = [
+  { label: "Discord", href: "#" },
+  { label: "X", href: "#" },
+  { label: "YouTube", href: "#" }
+];

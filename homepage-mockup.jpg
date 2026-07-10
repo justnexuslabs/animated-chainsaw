@@ -1,0 +1,150 @@
+import { Cpu, DatabaseZap, Fingerprint, PackageCheck, Users } from "lucide-react";
+import { CTAButton } from "@/src/components/CTAButton";
+import { DonLienImage } from "@/src/components/DonLienImage";
+import { Footer } from "@/src/components/Footer";
+import { GlassCard } from "@/src/components/GlassCard";
+import { HeroSection } from "@/src/components/HeroSection";
+import { SectionHeading } from "@/src/components/SectionHeading";
+import {
+  assets,
+  genesis,
+  joinLienity,
+  meetDonLien,
+  missionControl,
+  whatIsDonLien
+} from "@/src/config/homepage";
+
+const icons = [Cpu, DatabaseZap, Users];
+
+export default function HomePage() {
+  return (
+    <>
+      <HeroSection />
+
+      <section id="what-is-donlien" className="border-b border-cyberGreen/20 py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.72fr] lg:px-8">
+          <div>
+            <SectionHeading title={whatIsDonLien.title} copy={whatIsDonLien.copy} />
+            <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+              {whatIsDonLien.cards.map((card, index) => {
+                const Icon = icons[index];
+                return (
+                  <GlassCard key={card.title} as="article">
+                    <Icon className="text-neonGreen" size={24} />
+                    <h3 className="mt-5 font-heading text-lg font-black uppercase text-whiteSmoke">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-whiteSmoke/64">{card.copy}</p>
+                  </GlassCard>
+                );
+              })}
+            </div>
+          </div>
+          <DonLienImage
+            src={assets.command}
+            alt="DonLien in a classified command center"
+            className="min-h-[520px]"
+            label="COMMAND DONLIEN"
+          />
+        </div>
+      </section>
+
+      <section id="genesis" className="border-b border-cyberGreen/20 bg-charcoal/35 py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1fr] lg:px-8">
+          <DonLienImage
+            src={assets.genesis}
+            alt="Genesis collector box and classified access crate"
+            className="min-h-[430px]"
+            label="GENESIS CRATE"
+          />
+          <div className="self-center">
+            <SectionHeading title={genesis.title} copy={genesis.copy} />
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {genesis.cards.map((card) => (
+                <GlassCard key={card} className="p-5">
+                  <PackageCheck className="text-neonGreen" size={22} />
+                  <p className="mt-4 font-heading text-base font-black uppercase text-whiteSmoke">
+                    {card}
+                  </p>
+                </GlassCard>
+              ))}
+            </div>
+            <CTAButton href="/genesis" className="mt-8">
+              {genesis.cta}
+            </CTAButton>
+          </div>
+        </div>
+      </section>
+
+      <section id="mission-control" className="border-b border-cyberGreen/20 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading title={missionControl.title} align="center" />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {missionControl.cards.map((card) => (
+              <GlassCard key={card.label}>
+                <p className="font-heading text-[11px] uppercase tracking-[0.22em] text-whiteSmoke/45">
+                  {card.label}
+                </p>
+                <p className="mt-4 font-heading text-xl font-black uppercase text-neonGreen">
+                  {card.value}
+                </p>
+              </GlassCard>
+            ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <CTAButton href="/mission-control">{missionControl.cta}</CTAButton>
+          </div>
+        </div>
+      </section>
+
+      <section id="meet-donlien" className="border-b border-cyberGreen/20 bg-charcoal/35 py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.86fr] lg:px-8">
+          <div>
+            <SectionHeading title={meetDonLien.title} copy={meetDonLien.copy} />
+            <GlassCard className="mt-8">
+              <blockquote className="whitespace-pre-line font-heading text-3xl font-black uppercase leading-tight text-neonGreen">
+                &ldquo;{meetDonLien.quote}&rdquo;
+              </blockquote>
+            </GlassCard>
+          </div>
+          <DonLienImage
+            src={assets.meet}
+            alt="DonLien standing with a serious confident expression"
+            className="min-h-[520px]"
+            label="MEET DONLIEN"
+          />
+        </div>
+      </section>
+
+      <section id="join-lienity" className="border-b border-cyberGreen/20 py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.78fr_1fr] lg:px-8">
+          <DonLienImage
+            src={assets.identity}
+            alt="DonLien identity protocol visual"
+            className="min-h-[420px]"
+            label="LIEN IDENTITY"
+          />
+          <div>
+            <SectionHeading title={joinLienity.title} copy={joinLienity.copy} />
+            <GlassCard className="mt-8">
+              <Fingerprint className="text-neonGreen" size={34} />
+              <h3 className="mt-5 font-heading text-2xl font-black uppercase text-whiteSmoke">
+                {joinLienity.cardTitle}
+              </h3>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <CTAButton href="/lienity">Generate</CTAButton>
+                {joinLienity.buttons.map((button) => (
+                  <CTAButton key={button} href="#" variant="secondary">
+                    {button}
+                  </CTAButton>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}

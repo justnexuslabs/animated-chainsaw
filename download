@@ -1,0 +1,95 @@
+import { CTAButton } from "@/src/components/CTAButton";
+import { DonLienImage } from "@/src/components/DonLienImage";
+import { GlassCard } from "@/src/components/GlassCard";
+import { HUDPanel } from "@/src/components/HUDPanel";
+import { assets, hero, heroFeatureCards, hudStats } from "@/src/config/homepage";
+
+export function HeroSection() {
+  return (
+    <section className="relative flex min-h-screen overflow-hidden border-b border-cyberGreen/20 pt-16">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_18%,rgba(57,255,20,0.18),transparent_22%),radial-gradient(circle_at_84%_38%,rgba(11,163,96,0.16),transparent_20%),linear-gradient(180deg,rgba(11,15,12,0.5),#0B0F0C_88%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-[linear-gradient(180deg,transparent,rgba(11,61,32,0.28)),repeating-linear-gradient(90deg,rgba(230,230,230,0.13)_0_1px,transparent_1px_54px)] opacity-70" />
+      <div className="absolute inset-0 bg-scan-lines bg-[length:100%_8px] opacity-50" />
+
+      <div className="absolute left-[28%] top-20 hidden h-36 w-64 animate-hover md:block">
+        <DonLienImage
+          src={assets.ufo}
+          alt="UFO hovering above the LIENIVERSE city"
+          className="h-full w-full border-neonGreen/20 bg-transparent shadow-none"
+          imgClassName="object-contain"
+          label="UFO ASSET"
+        />
+      </div>
+      <div className="absolute bottom-36 right-[42%] hidden h-20 w-52 animate-hover lg:block">
+        <DonLienImage
+          src={assets.cybertruck}
+          alt="Hovering cybertruck in the cyberpunk skyline"
+          className="h-full w-full border-cyberGreen/20 bg-transparent shadow-none"
+          label="CYBERTRUCK ASSET"
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-end gap-6 px-4 pb-6 sm:px-6 lg:grid-cols-[1fr_0.72fr] lg:px-8">
+        <div className="pb-6 pt-10 sm:pt-16 lg:pb-10">
+          <p className="mb-5 font-heading text-[10px] font-bold uppercase tracking-[0.28em] text-neonGreen">
+            {hero.status} <span className="ml-2 text-neonGreen/45">|||||</span>
+          </p>
+          <p className="font-heading text-xs font-bold uppercase tracking-[0.24em] text-whiteSmoke/84">
+            {hero.kicker}
+          </p>
+          <h1 className="mt-2 font-heading text-5xl font-black uppercase leading-[0.92] text-whiteSmoke sm:text-7xl lg:text-8xl">
+            <span className="text-neonGreen">LIEN</span>IVERSE
+          </h1>
+          <p className="mt-4 font-heading text-xs font-bold uppercase tracking-[0.22em] text-whiteSmoke sm:text-sm">
+            {hero.subheadline}
+          </p>
+          <p className="mt-4 max-w-xl text-base leading-7 text-whiteSmoke/78 sm:text-lg">
+            {hero.description}
+          </p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <CTAButton href="/mission-control">{hero.primaryCta}</CTAButton>
+            <CTAButton href="/genesis" variant="secondary">
+              {hero.secondaryCta}
+            </CTAButton>
+          </div>
+          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            {heroFeatureCards.map((card) => (
+              <GlassCard key={card.title} className="min-h-28 p-4">
+                <p className="font-heading text-lg font-black uppercase text-whiteSmoke">
+                  {card.title}
+                </p>
+                <p className="mt-2 text-sm leading-5 text-whiteSmoke/58">{card.copy}</p>
+              </GlassCard>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative min-h-[500px] lg:min-h-[680px]">
+          <div className="absolute inset-x-6 bottom-4 top-0 rounded-full bg-neonGreen/10 blur-3xl" />
+          <DonLienImage
+            src={assets.hero}
+            alt="DonLien smiling in a presidential suit with a vertical glowing DONLIEN tie"
+            priority
+            className="absolute inset-x-0 bottom-0 h-[520px] border-0 bg-transparent shadow-none sm:h-[620px] lg:h-[700px]"
+            imgClassName="object-contain object-bottom"
+            label="HERO DONLIEN"
+          />
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-[1fr_1.4fr_0.8fr_0.9fr]">
+          <HUDPanel label={hudStats[0].label} value={hudStats[0].value} />
+          <GlassCard className="p-4">
+            <p className="font-heading text-[10px] uppercase tracking-[0.22em] text-whiteSmoke/45">
+              LIENIVERSE SIGNAL
+            </p>
+            <p className="mt-2 text-xs font-bold uppercase leading-5 tracking-[0.12em] text-whiteSmoke/78">
+              {hero.manifesto}
+            </p>
+          </GlassCard>
+          <HUDPanel label={hudStats[1].label} value={hudStats[1].value} />
+          <HUDPanel label={hudStats[3].label} value={hudStats[3].value} />
+        </div>
+      </div>
+    </section>
+  );
+}
