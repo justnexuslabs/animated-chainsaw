@@ -1,92 +1,65 @@
-export const assets = {
-  hero: "/assets/donlien/donlien-hero.png",
-  command: "/assets/donlien/donlien-command.png",
-  genesis: "/assets/donlien/donlien-genesis.png",
-  missionControl: "/assets/donlien/donlien-mission-control.png",
-  meet: "/assets/donlien/donlien-meet.png",
-  identity: "/assets/donlien/donlien-identity.png",
-  ufo: "/assets/donlien/donlien-ufo.png",
-  cybertruck: "/assets/donlien/donlien-hover-cybertruck.png"
-};
+lockfileVersion: '9.0'
 
-export const references = {
-  homepageMockup: "/assets/donlien/references/homepage-mockup.jpg",
-  websiteBuildBrief: "/assets/donlien/references/website-build-brief-v1.jpg"
-};
+importers:
+  .:
+    dependencies:
+      react:
+        specifier: ^18.0.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.0.0
+        version: 18.2.0(react@18.2.0)
+      next:
+        specifier: ^14.0.0
+        version: 14.0.3
+      typescript:
+        specifier: ^5.0.0
+        version: 5.2.2
+      lucide-react:
+        specifier: ^latest
+        version: 0.292.0
+      clsx:
+        specifier: ^2.0.0
+        version: 2.0.0
+      tailwindcss:
+        specifier: ^3.0.0
+        version: 3.3.6
 
-export const hero = {
-  status: "TRANSMISSION ACTIVE",
-  kicker: "WELCOME TO THE",
-  title: "LIENIVERSE",
-  subheadline: "DECENTRALIZED. INTELLIGENT. LIMITLESS.",
-  description:
-    "DonLien is building the future of AI, Web3, and community. Genesis begins with 300 Founding LIENS.",
-  primaryCta: "ENTER MISSION CONTROL",
-  secondaryCta: "JOIN GENESIS",
-  manifesto: "THE LIENIVERSE IS NOT BUILT. IT IS REMEMBERED. WE DON'T FOLLOW NARRATIVES. WE BUILD THE LIENIVERSE."
-};
+packages:
+  react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2cR1z8h0+QC8lPHlGGtxMBNbOVJL2+F3P1W2v4}
+    peerDependencies:
+      react: '18.2.0'
+    dev: false
 
-export const heroFeatureCards = [
-  { title: "AI", copy: "Advanced Intelligence Systems" },
-  { title: "WEB3", copy: "Decentralized Power Network" },
-  { title: "COMMUNITY", copy: "Built by LIENITY For LIENITY" }
-];
+  react-dom@18.2.0:
+    resolution: {integrity: sha512-IM4t31NeCq9w5fcl5zcbXXE2GhDZT75vD6Xqm6VgG76yI6pJbfzLM1EBgQQeJzLj/pNwWn0K3dXhIyPdWrD8w==}
+    peerDependencies:
+      react: '18.2.0'
+    dev: false
 
-export const hudStats = [
-  { label: "Mission Status", value: "GENESIS PROTOCOL" },
-  { label: "Clearance Level", value: "51" },
-  { label: "Transmission Status", value: "ONLINE" },
-  { label: "Next Transmission", value: "23:47:51" }
-];
+  next@14.0.3:
+    resolution: {integrity: sha512-+qDFjBn3pVKOoXpI9X+v5w8GhF8yVc84oIIV2wWF+OzMDEKGILPlNqb2K/4VGRapJrNmSxaHmLMLWFJUCl1r9Q==}
+    peerDependencies:
+      react: '18.2.0'
+      react-dom: '18.2.0'
+    dev: false
 
-export const whatIsDonLien = {
-  title: "WHAT IS DONLIEN?",
-  copy:
-    "DonLien is a cinematic Web3 and AI universe built around the LIENIVERSE, the Decentralized Entelligence Network, and a community of builders called the LIENITY.",
-  cards: [
-    {
-      title: "AI SYSTEMS",
-      copy: "Advanced intelligence and autonomous systems."
-    },
-    {
-      title: "WEB3 FOUNDATION",
-      copy: "Decentralized ownership, transparency, and access."
-    },
-    {
-      title: "LIENITY COMMUNITY",
-      copy: "A movement of creators, builders, and believers."
-    }
-  ]
-};
+  typescript@5.2.2:
+    resolution: {integrity: sha512-mI4WrpHsbCIB3v/JJXoNCHzDE3wKoQ68JK7N8Ky4/AYR19Ieb9IgeJaB04Z2CRJNZTC+2c+n7vPDMD5QxvnnA==}
+    dev: false
 
-export const genesis = {
-  title: "300 FOUNDING LIENS",
-  copy: "Genesis is the beginning of everything. Only 300 will be chosen.",
-  cards: ["300 Genesis NFTs", "Collectors Edition", "DOS Access", "Genesis Box"],
-  cta: "EXPLORE GENESIS"
-};
+  lucide-react@0.292.0:
+    resolution: {integrity: sha512-i0+bQNqVzLfavSbarLSvYmKuq4w+SUyGXSWsQFJCl6g2RVUhRb7dI+NDSD6BEfj8ztWF6mWz9o0j/3hQlBBog==}
+    peerDependencies:
+      react: '>=16.5.1'
+      react-dom: '>=16.5.1'
+    dev: false
 
-export const missionControl = {
-  title: "MISSION CONTROL",
-  cards: [
-    { label: "Build Progress", value: "68%" },
-    { label: "Roadmap", value: "Q2 2026" },
-    { label: "LIENITY", value: "Active Members" },
-    { label: "Current Mission", value: "Expand the LIENIVERSE" },
-    { label: "Transmission Status", value: "Online" }
-  ],
-  cta: "ENTER MISSION CONTROL"
-};
+  clsx@2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwaLU+3/+KMnETY7Fsuj7ZAnG+30JTiee1w0+XRjfUbSR1+6V0pt3ds26qv7hfollowing==}
+    dev: false
 
-export const meetDonLien = {
-  title: "THE ARCHITECT OF THE LIENIVERSE",
-  copy: "DonLien did not come to fit in. He came to build what was never meant to exist.",
-  quote: "We don't follow.\nWe don't exist.\nWe build."
-};
-
-export const joinLienity = {
-  title: "BE PART OF THE MOVEMENT",
-  copy: "Generate your identity. Join the community. Help build the future.",
-  cardTitle: "GENERATE YOUR LIEN ID",
-  buttons: ["Join Discord", "Follow X", "Watch YouTube"]
-};
+  tailwindcss@3.3.6:
+    resolution: {integrity: sha512-4nZYZ87Cxj0K6yEhwF0vZVIPDc5UVW8V/yqE9D+VR6K5z1mFH3nXuMONbNW4S1pKwIHnhJ9qLbsGRUvJr3oKg==}
+    dev: false
