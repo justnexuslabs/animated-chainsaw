@@ -1,23 +1,19 @@
-import type { ReactNode } from "react";
-import { clsx } from "clsx";
+export const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Mission", href: "/mission" },
+  { label: "Genesis", href: "/genesis" }
+];
 
-type GlassCardProps = {
-  children: ReactNode;
-  className?: string;
-  as?: "div" | "article" | "section";
-};
+export const footerResources = [
+  { label: "Docs", href: "/docs" },
+  { label: "Whitepaper", href: "/whitepaper" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" }
+];
 
-export function GlassCard({ children, className, as: Tag = "div" }: GlassCardProps) {
-  return (
-    <Tag
-      className={clsx(
-        "border border-cyberGreen/25 bg-obsidian/58 p-5 shadow-panel backdrop-blur-xl",
-        "before:pointer-events-none before:absolute before:inset-0 before:border before:border-white/5 before:bg-[linear-gradient(135deg,rgba(57,255,20,0.055),transparent_36%)]",
-        "relative overflow-hidden",
-        className
-      )}
-    >
-      {children}
-    </Tag>
-  );
-}
+export const connectLinks = [
+  { label: "Discord", href: "https://discord.gg/donlien" },
+  { label: "Twitter", href: "https://twitter.com/donlien" },
+  { label: "GitHub", href: "https://github.com/justnexuslabs" }
+];
